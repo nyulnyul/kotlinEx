@@ -1,5 +1,6 @@
 package com.example.kotlinex
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,19 +17,38 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            KotlinExTheme {
-                // A surface container using the 'background' color from the theme
-                GraphAppMain()
-            }
+
+
+        }
+    }
+}
+
+@Composable
+fun ThemeTest1(){
+    KotlinExTheme(darkTheme = true) {
+        Surface(modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background) {
+            Text(text = "Hello World!",style = MaterialTheme.typography.titleLarge)
+            Text(text = "Hello World!",style = MaterialTheme.typography.titleMedium)
         }
     }
 }
 
 
+@Preview(showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    name = "Light Mode")
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun TestPreview() {
+    KotlinExTheme {
+
+    }
+}
+@Preview(showBackground = true,uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "Dark Mode")
+@Composable
+fun TestPreview2() {
     KotlinExTheme {
 
     }
