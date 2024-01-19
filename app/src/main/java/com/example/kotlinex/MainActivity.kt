@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ThemeTest1(){
-    KotlinExTheme(darkTheme = true) {
+    KotlinExTheme {
         Surface(modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background) {
             Text(text = "Hello World!",style = MaterialTheme.typography.titleLarge)

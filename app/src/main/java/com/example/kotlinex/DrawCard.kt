@@ -22,6 +22,7 @@ import com.example.kotlinex.Screen.CardFront
 fun DrawCard() {
     var cardFront by remember { mutableStateOf(true) }
     val anime by animateFloatAsState(targetValue = if (cardFront) 0f else 180f)
+    var originPlayer by remember { mutableStateOf("Son") }
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -32,11 +33,11 @@ fun DrawCard() {
             .graphicsLayer {
                 rotationY = anime
             }
-            .background(Color.DarkGray)) {
+            .background(Color.White)) {
         if (anime <= 90) {
-            CardFront()
+            CardFront(originPlayer = originPlayer, onPlayerChange = { originPlayer = it })
         } else {
-            CardBack()
+            CardBack(originPlayer = originPlayer)
 
         }
     }
