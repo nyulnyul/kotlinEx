@@ -1,4 +1,4 @@
-package com.example.kotlinex.Screen
+package com.example.kotlinex.uiex
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.kotlinex.DrawCard
 import com.example.kotlinex.R
 
 @Composable

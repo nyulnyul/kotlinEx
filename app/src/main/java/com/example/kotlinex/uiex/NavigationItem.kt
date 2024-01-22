@@ -1,4 +1,4 @@
-package com.example.kotlinex
+package com.example.kotlinex.uiex
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
